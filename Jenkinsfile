@@ -1,13 +1,13 @@
 pipeline {
     agent any
-    
+
     environment {
         // Docker Hub username
         DOCKERHUB_USER = "oluwaseun2424"
         // The name of the image on Docker Hub
         IMAGE_NAME = "${DOCKERHUB_USER}/my-app"
         // Make sure this matches the ID in Jenkins exactly (using a hyphen)
-        DOCKER_CRED_ID = "dockerhub-credentials " 
+        DOCKER_CRED_ID = "dockerhub-credential" 
         // Give the image a unique tag using the build number
         IMAGE_TAG = "${BUILD_NUMBER}"
     }

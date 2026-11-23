@@ -1,6 +1,6 @@
 pipeline {
     agent any
-git
+    
     environment {
         // Docker Hub username
         DOCKERHUB_USER = "oluwaseun2424"

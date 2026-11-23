@@ -1,6 +1,13 @@
 pipeline {
     agent any
 
+tools {
+        git 'Default Git'  // The name must exactly match what you entered in Global Tool Configuration
+    }
+    stages {
+        // ... your stages ...
+    }
+
     environment {
         // Docker Hub username (write your own)
         DOCKERHUB_USER = "oluwaseun2424"
@@ -8,7 +15,7 @@ pipeline {
         IMAGE_NAME = "${DOCKERHUB_USER}/my-app"cle
         // The credential ID created in Jenkins
         DOCKER_CRED_ID = "dockerhub+credentials"
-        // Give the image a unique tag, usually using the build number
+        // Give the image a unique tag, usually using the build` number
         IMAGE_TAG = "${BUILD_NUMBER}"
     }
 

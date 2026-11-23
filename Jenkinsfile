@@ -1,11 +1,6 @@
 pipeline {
     agent any
 
-    tools {
-        // Note the quotes around the name!
-        git 'Default Git'  
-    }
-
     environment {
         // Docker Hub username
         DOCKERHUB_USER = "oluwaseun2424"
